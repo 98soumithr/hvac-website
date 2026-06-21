@@ -64,22 +64,24 @@
     .hamburger { display: flex !important; }
 
     /* Hero */
-    .hero-grid { grid-template-columns: 1fr !important; gap: 40px !important; padding: 48px 20px 60px !important; }
+    .hero-grid { grid-template-columns: 1fr !important; gap: 0 !important; padding: 36px 20px 52px !important; }
     .hero-photo { display: none !important; }
-    .hero-text h1 { font-size: 38px !important; letter-spacing: -1px !important; }
+    .hero-mobile-img { display: block !important; }
+    .hero-text h1 { font-size: 36px !important; letter-spacing: -1px !important; }
     .hero-text p { font-size: 15px !important; }
     .hero-btns { flex-direction: column !important; align-items: stretch !important; }
     .hero-btns a { justify-content: center !important; }
-    .hero-badges { gap: 16px !important; flex-wrap: wrap !important; }
+    .hero-badges { gap: 14px !important; flex-wrap: wrap !important; }
 
     /* Services */
-    .services-grid { grid-template-columns: 1fr !important; }
+    .services-grid { grid-template-columns: 1fr 1fr !important; }
     #services { padding: 72px 20px !important; }
 
     /* About */
-    .about-grid { grid-template-columns: 1fr !important; gap: 40px !important; }
+    .about-grid { grid-template-columns: 1fr !important; gap: 32px !important; }
     #about { padding: 72px 20px !important; }
     .about-photo { display: none !important; }
+    .about-mobile-img { display: block !important; }
 
     /* Process */
     #process { padding: 72px 20px !important; }
@@ -102,6 +104,7 @@
   }
 
   @media (max-width: 480px) {
+    .services-grid { grid-template-columns: 1fr !important; }
     .process-grid { grid-template-columns: 1fr !important; }
     .footer-grid { grid-template-columns: 1fr !important; }
     .contact-inner { padding: 28px 16px !important; }
@@ -234,6 +237,39 @@
         <div>
           <div style="font-size:13px;font-weight:600;color:#0B1A2F;">500+ Happy Clients</div>
           <div style="font-size:11px;color:#7A95B8;margin-top:1px;">This month alone</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile-only hero image (hidden on desktop) -->
+    <div class="hero-mobile-img" style="display:none;margin-top:36px;">
+      <div style="position:relative;border-radius:20px;overflow:hidden;box-shadow:0 16px 40px rgba(30,144,255,.15);">
+        <img src="HVAC Website Template (1)/uploads/pasted-1782064548147-0.png" alt="HVAC Technician" style="width:100%;height:280px;object-fit:cover;object-position:center top;display:block;" />
+        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(11,26,47,.7) 0%,transparent 55%);pointer-events:none;"></div>
+        <!-- Stats bar at bottom -->
+        <div style="position:absolute;bottom:14px;left:14px;right:14px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;">
+          <div style="background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-radius:10px;padding:8px;text-align:center;">
+            <div style="font-size:16px;font-weight:700;color:#1E90FF;font-family:'DM Serif Display',serif;">22°</div>
+            <div style="font-size:9px;color:#7A95B8;">Set Temp</div>
+          </div>
+          <div style="background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-radius:10px;padding:8px;text-align:center;">
+            <div style="font-size:16px;font-weight:700;color:#00AADD;font-family:'DM Serif Display',serif;">68%</div>
+            <div style="font-size:9px;color:#7A95B8;">Humidity</div>
+          </div>
+          <div style="background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-radius:10px;padding:8px;text-align:center;">
+            <div style="font-size:16px;font-weight:700;color:#16A362;font-family:'DM Serif Display',serif;">A+</div>
+            <div style="font-size:9px;color:#7A95B8;">Efficiency</div>
+          </div>
+        </div>
+        <!-- On Call badge -->
+        <div style="position:absolute;top:12px;left:12px;background:rgba(255,255,255,.95);border-radius:8px;padding:6px 12px;display:flex;align-items:center;gap:7px;">
+          <div style="width:7px;height:7px;border-radius:50%;background:#16A362;box-shadow:0 0 0 3px rgba(22,163,98,.2);flex:none;"></div>
+          <span style="font-size:11px;font-weight:600;color:#0B1A2F;">On Call Now</span>
+        </div>
+        <!-- Response time badge -->
+        <div style="position:absolute;top:12px;right:12px;background:linear-gradient(135deg,#FF6B2B,#FF9A5C);border-radius:10px;padding:8px 12px;text-align:center;">
+          <div style="font-size:9px;font-weight:600;color:rgba(255,255,255,.85);text-transform:uppercase;letter-spacing:.4px;">Response</div>
+          <div style="font-size:14px;font-weight:700;color:#fff;">Under 1hr</div>
         </div>
       </div>
     </div>
@@ -421,6 +457,25 @@
     </div>
 
     <div>
+      <!-- Mobile-only about image (hidden on desktop) -->
+      <div class="about-mobile-img" style="display:none;margin-bottom:28px;">
+        <div style="position:relative;border-radius:20px;overflow:hidden;box-shadow:0 16px 40px rgba(30,144,255,.12);">
+          <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80" alt="HVAC Technician at work" style="width:100%;height:220px;object-fit:cover;display:block;" />
+          <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(11,26,47,.5) 0%,transparent 55%);pointer-events:none;"></div>
+          <div style="position:absolute;bottom:14px;left:14px;background:rgba(255,255,255,.95);backdrop-filter:blur(10px);border:1px solid #D6E4F7;border-radius:8px;padding:8px 14px;display:flex;align-items:center;gap:8px;">
+            <div style="width:7px;height:7px;border-radius:50%;background:#16A362;box-shadow:0 0 0 3px rgba(22,163,98,.2);flex:none;"></div>
+            <div>
+              <div style="font-size:11px;color:#0B1A2F;font-weight:600;">NATE Certified Technician</div>
+              <div style="font-size:10px;color:#7A95B8;">Fully licensed &amp; insured</div>
+            </div>
+          </div>
+          <div style="position:absolute;bottom:14px;right:14px;background:linear-gradient(135deg,#1E90FF,#00C6FF);border-radius:12px;padding:10px 16px;text-align:center;">
+            <div style="font-size:22px;font-weight:700;color:#fff;font-family:'DM Serif Display',serif;line-height:1;">15+</div>
+            <div style="font-size:10px;color:rgba(255,255,255,.85);font-weight:500;">Years</div>
+          </div>
+        </div>
+      </div>
+
       <div style="display:inline-flex;align-items:center;gap:8px;background:#EEF5FF;border:1px solid #C2D9FF;border-radius:100px;padding:6px 18px;margin-bottom:18px;">
         <span style="font-size:13px;font-weight:600;color:#1E90FF;letter-spacing:.5px;text-transform:uppercase;">Why Choose Us</span>
       </div>
